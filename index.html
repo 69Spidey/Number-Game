@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>🎮 Guess the Number Game 🎲</title>
+    <link rel="stylesheet" href="style.css" />
+  </head>
+  <body>
+    <div class="container">
+      <h1>🎮 Guess the Number Game 🎲</h1>
+      <p>Guess the number between 0-100 within 7 chances!</p>
+
+      <div class="input-container">
+        <input
+          type="number"
+          id="input"
+          min="0"
+          max="100"
+          placeholder="Enter your guess"
+          required
+          onkeypress="handleKeyPress(event)"
+        />
+        <button id="btn">Submit Guess</button>
+        <button id="play">Play Again</button>
+      </div>
+
+      <p id="msg"></p>
+
+      <div class="rules">
+        <h2>How to Play:</h2>
+        <p>👉🏻 You need to guess a number between 0 and 100.</p>
+        <p>👉🏻 You have 7 chances to guess the correct number.</p>
+        <p>
+          👉🏻 After each guess, you will be informed if your guess is correct or
+          not.
+        </p>
+        <p>
+          👉🏻 The game will end when you either guess the correct number or run
+          out of chances.
+        </p>
+        <p>👉🏻 Good luck and have fun!</p>
+      </div>
+    </div>
+
+    <script src="main.js"></script>
+  </body>
+</html>

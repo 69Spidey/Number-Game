@@ -27,8 +27,8 @@ let compare = (playerGuess) => {
     msg.innerText = `You lost! 😞. The actual number was ${num}`;
     input.disabled = true;
     btn.disabled = true;
-    btn.style.backgroundColor = "#ccc";
-    btn.style.cursor = "not-allowed";
+    btn.style.display = "none";
+    play.style.display = "block";
   }
 };
 
@@ -47,6 +47,7 @@ btn.addEventListener("click", () => {
 });
 
 play.addEventListener("click", () => {
+  num = Math.floor(Math.random() * 101);
   input.value = "";
   chances = 7;
   msg.innerText = `Chances left: ${chances}`;
